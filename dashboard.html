@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard - OISNT PRO</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+    <nav>
+        <h2>🔐 OISNT PRO</h2>
+        <a href="profile.html" class="btn">👤 Profile</a>
+    </nav>
+
+    <div class="grid">
+        <div class="card" data-tool="num">📱 Number Info</div>
+        <div class="card" data-tool="adhar">🎫 Aadhar Info</div>
+        <div class="card" data-tool="insta">🪪 Insta Info</div>
+        <div class="card" data-tool="ifsc">🏦 IFSC Info</div>
+        <div class="card" data-tool="veh">🚗 Vehicle Info</div>
+        <div class="card" data-tool="tg">🆔 TG Info</div>
+        <div class="card" data-tool="pak">🇵🇰 Pak Info</div>
+        <div class="card" data-tool="ration">🪪 Ration Info</div>
+        <div class="card" data-tool="ffvisit">🔍 FF Visit</div>
+        <div class="card" data-tool="fflike">🔥 FF Like</div>
+        <div class="card" data-tool="owner">👑 Owner</div>
+        <div class="card" data-tool="profile">👤 My Profile</div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title"></h3>
+            <input type="text" id="query" placeholder="Enter value..." />
+            <button onclick="runTool()">Execute</button>
+            <pre id="result"></pre>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
