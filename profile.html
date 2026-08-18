@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Profile</title></head>
+<body class="profile">
+    <h2>👤 Your Profile</h2>
+    <div id="data">Loading...</div>
+    <a href="dashboard.html" class="btn">← Back</a>
+
+    <script>
+        const user = localStorage.getItem("user");
+        fetch(`server.py?get_user=${user}`)
+            .then(r => r.json())
+            .then(data => {
+                document.getElementById("data").innerHTML = `
+                    <p><b>Name:</b> ${data.name}</p>
+                    <p><b>Username:</b> @${data.username}</p>
+                    <p><b>UserID:</b> ${data.userid}</p>
+                    <p><b>Credit:</b> ${data.credit}</p>
+                    <p><b>Status:</b> ${data.credit > 0 ? 'Active' : '⚠️ Buy More'}</p>
+                `;
+            });
+    </script>
+</body>
+</html>
